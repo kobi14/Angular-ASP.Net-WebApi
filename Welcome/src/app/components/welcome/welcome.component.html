@@ -1,0 +1,163 @@
+<div class="container">
+  <!-- <form class="form-horizontal">
+
+
+    <div class="row" style="padding:25px;">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="code" class="col-lg-2 control-label">code</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="code" placeholder="Enter code">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name" class="col-lg-2 control-label">Name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="name" placeholder="Enter the text">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-10">
+        </div>
+       
+        <div class="col-md-2">
+        <button type="reset" class="btn btn-default">Cancel</button>&nbsp;&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+
+  </form>
+  <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of Listx">
+          <td>{{x.Id}}</td>
+          <td>{{x.Code}}</td>
+          <td>{{x.Name}}</td>
+          <td>
+              <a href="#" class="btn btn-info btn-sm" >More</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="#" class="btn btn-danger btn-sm" (click)="dele(x)">Delete</a>
+          </td>
+          
+        </tr>
+    
+      </tbody>
+    </table> -->
+
+  <!-- 
+    <div class="row">
+      <div class="col-md-6">
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div> -->
+
+  <div class="row" style="padding-top:10px; ">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Welcome To my World
+        </div>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col-md-8">
+              <table class="table table-striped table-hover ">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <!-- <tr *ngFor="let x of Listx"> -->
+                      <tr *ngFor="let x of welcomex"> 
+
+                     <td>{{x.Id}}</td>
+                    <td>{{x.Code}}</td>
+                    <td>{{x.Name}}</td>
+                    <td>
+                      <a href="#" class="btn btn-info btn-sm" (click)="more(x)">More</a>
+                      &nbsp;&nbsp;&nbsp;
+                      <a href="#" class="btn btn-danger btn-sm" (click)="dele(x)">Delete</a>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-4">
+              <form action="">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Auto Id" name="id" aria-describedby="basic-addon1" [(ngModel)]="id" readonly>
+                </div>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Code" name="code" aria-describedby="basic-addon1" [(ngModel)]="code">
+                </div>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Name" name="name" aria-describedby="basic-addon1" [(ngModel)]="name">
+                </div>
+              </form>
+
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-outline-primary" (click)="Refresh()">Refresh</button>
+          <button type="button" class="btn btn-outline-primary float-right">Print</button>
+          <button type="button" [disabled]="isEmpty()" class="btn btn-outline-primary float-right" (click)="onSubmit()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
